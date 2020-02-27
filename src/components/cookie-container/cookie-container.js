@@ -8,7 +8,14 @@ class CookieContainer extends React.Component {
     this.genericFunction = this.genericFunction.bind(this);
   }
 
-  componentWillMount() {
+  // componentWillMount() {
+  //   // chama método antes de inicializar o render();
+  //   console.log('WillMount'); // é chamado antes
+
+  //   this.setState({ showCookie: this.compareDate() });
+  // }
+
+  componentDidMount() {
     // chama método antes de inicializar o render();
     console.log('WillMount'); // é chamado antes
 
@@ -84,14 +91,6 @@ class CookieContainer extends React.Component {
   }
 
   render() {
-    // let showCookie = compareDate();
-
-    // const genericFunction = () => {
-    // 	closeMessage(showCookie);
-    // }
-
-    // this.setState({showCookie:compareDate()});
-
     return (
       <>
         {this.state.showCookie ? (
